@@ -26,7 +26,7 @@
 
   ## Demo
 
-  You can see an example of the component in action in the [available demo](https://your-demo-link.com).
+  You can see an example of the component in action in the [available demo](https://vofronte.github.io/vue-3-search-name/).
 
   ## Installation and Setup
 
@@ -109,4 +109,3 @@
   ## Component Testing
 
   **Vitest** is used for testing. You can run the tests using the `yarn test` command.
-
