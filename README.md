@@ -1,113 +1,112 @@
-# Поиск имен Vue 3 🔍
+  # Vue 3 Name Search 🔍
 
-Компонент поиска имен с подсказками, построенный на Vue 3 и TypeScript. Идеален для использования в проектах, где требуется функционал поиска с автозаполнением.
+  A name search component with suggestions, built with Vue 3 and TypeScript. Perfect for projects requiring autocomplete search functionality.
 
-<img width="658" height="348" alt="image" src="https://github.com/user-attachments/assets/56d47ccb-8f5e-4618-ba3c-c07bddd48b6a" />
+  <img width="658" height="348" alt="image" src="https://github.com/user-attachments/assets/56d47ccb-8f5e-4618-ba3c-c07bddd48b6a" />
 
+  ## Tech Stack
 
+  - **Vue 3** (Composition API)
+  - **TypeScript**
+  - **Vite** (Bbild and development)
+  - **SCSS** (Styling framework)
+  - **Vitest** (Testing)
+  - **ESLint**, **Prettier**, **Stylelint** (Linting and formatting)
+  - **Husky**, **lint-staged**, **commitlint**, **Commitizen** (Commit checks and formatting)
 
-## Стек технологий
+  ## Description
 
-- **Vue 3** (Composition API)
-- **TypeScript**
-- **Vite** (Сборка и разработка)
-- **SCSS** (Стилевой фреймворк)
-- **Vitest** (Тестирование)
-- **ESLint**, **Prettier**, **Stylelint** (Линтинг и форматирование)
-- **Husky**, **lint-staged**, **commitlint**, **Commitizen** (Проверки и форматирование коммитов)
+  This component provides functionality for name search with suggestions. The user types into the search field, and the component automatically displays matching results that can be selected using the mouse or keyboard.
 
-## Описание
+  Features:
+  - Highlighting of matched results.
+  - Support for navigation keys (`ArrowUp`, `ArrowDown`, `Enter`, `Escape`).
+  - **Debounce** functionality to improve performance.
+  - A responsive and accessible interface for screen readers.
 
-Этот компонент предоставляет функционал для поиска имен с подсказками. Пользователь вводит текст в поле поиска, и компоненты автоматически отображают подходящие результаты, которые можно выбрать с помощью мыши или клавиатуры.
+  ## Demo
 
-Особенности:
-- Подсветка совпадений в результатах.
-- Поддержка клавиш навигации (`ArrowUp`, `ArrowDown`, `Enter`, `Escape`).
-- Поддержка функции **debounce** для улучшения производительности.
-- Адаптивный и доступный интерфейс для использования с экранными читалками.
+  You can see an example of the component in action in the [available demo](https://your-demo-link.com).
 
-## Демо
+  ## Installation and Setup
 
-Пример использования компонента можно увидеть в [доступной версии демо](https://your-demo-link.com).
+  ### 1. Make sure you have the following tools installed:
+  - [Node.js](https://nodejs.org/en/download/) (version 18 or above)
+  - [Yarn](https://yarnpkg.com/getting-started/install) (or npm/pnpm)
 
-## Установка и запуск
-
-### 1. Убедитесь, что у вас установлены следующие инструменты:
-- [Node.js](https://nodejs.org/en/download/) (версия 18 или выше)
-- [Yarn](https://yarnpkg.com/getting-started/install) (или npm/pnpm)
-
-### 2. Клонируйте репозиторий и установите зависимости:
-
-```bash
-git clone https://github.com/vofronte/vue-3-search-name.git
-cd vue-3-search-name
-yarn install
-````
-
-### 3. Запустите dev-сервер:
-
-```bash
-yarn dev
-```
-
-Проект будет доступен по адресу [http://localhost:5173](http://localhost:5173).
-
-### 4. Для тестирования:
-
-Запуск тестов:
-
-```bash
-yarn test
-```
-
-### 5. Для линтинга и форматирования:
-
-* Линтинг (ESLint + Stylelint):
+  ### 2. Clone the repository and install dependencies:
 
   ```bash
-  yarn lint
-  ```
+  git clone https://github.com/vofronte/vue-3-search-name.git
+  cd vue-3-search-name
+  yarn install
+  ````
 
-* Форматирование (Prettier):
+  ### 3. Start the dev server:
 
   ```bash
-  yarn format
+  yarn dev
   ```
 
-### 6. Для коммитов используйте:
+  The project will be available at [http://localhost:5173](http://localhost:5173).
 
-```bash
-yarn commit
-```
+  ### 4. For testing:
 
-Этот скрипт вызывает Commitizen и помогает создавать коммиты с правильным форматом.
+  Run the tests:
 
-### 7. Для сборки проекта:
+  ```bash
+  yarn test
+  ```
 
-```bash
-yarn build
-```
+  ### 5. For linting and formatting:
 
-## Использование компонента
+  * Linting (ESLint + Stylelint):
 
-```vue
-<NameSearch @select="handleNameSelect" />
-```
+    ```bash
+    yarn lint
+    ```
 
-Пример обработчика для выбора имени:
+  * Formatting (Prettier):
 
-```ts
-const handleNameSelect = (name: string | null) => {
-  console.log('Выбрано имя:', name)
-}
-```
+    ```bash
+    yarn format
+    ```
 
-### Параметры компонента:
+  ### 6. For commits, use:
 
-* `inputId` — уникальный идентификатор для поля ввода.
-* `names` — массив имен для поиска.
-* `debounceMs` — задержка debounce в миллисекундах перед выполнением поиска.
+  ```bash
+  yarn commit
+  ```
 
-## Тестирование компонента
+  This script runs Commitizen and helps you create commits with the correct format.
 
-Для тестирования используется **Vitest**. Вы можете запускать тесты с помощью команды `yarn test`.
+  ### 7. To build the project:
+
+  ```bash
+  yarn build
+  ```
+
+  ## Using the Component
+
+  ```vue
+  <NameSearch @select="handleNameSelect" />
+  ```
+
+  Example handler for name selection:
+
+  ```ts
+  const handleNameSelect = (name: string | null) => {
+    console.log('Selected name:', name)
+  }
+  ```
+
+  ### Component Props:
+
+  * `inputId`: A unique identifier for the input field.
+  * `names`: An array of names to search.
+  * `debounceMs`: Debounce delay in milliseconds before performing the search.
+
+  ## Component Testing
+
+  **Vitest** is used for testing. You can run the tests using the `yarn test` command.
+
