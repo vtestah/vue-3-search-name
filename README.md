@@ -26,7 +26,7 @@
 
   ## Demo
 
-  You can see an example of the component in action in the [available demo](https://vofronte.github.io/vue-3-search-name/).
+  You can see an example of the component in action in the [available demo](https://vtestah.github.io/vue-3-search-name/).
 
   ## Installation and Setup
 
@@ -37,7 +37,7 @@
   ### 2. Clone the repository and install dependencies:
 
   ```bash
-  git clone https://github.com/vofronte/vue-3-search-name.git
+  git clone https://github.com/vtestah/vue-3-search-name.git
   cd vue-3-search-name
   yarn install
   ````
